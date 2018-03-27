@@ -18,7 +18,7 @@ contract FenixCashTokenSale is Ownable {
 	address public wallet;
 
 	// how many token units a buyer gets per QTUM
-	uint256 public rate = 0.01 * 1E8;
+	uint256 public rate = 0.02 * 1E8;
 
 	// amount of token sold so far
 	uint256 public sold;
@@ -40,8 +40,8 @@ contract FenixCashTokenSale is Ownable {
 	event TransferManual(address indexed _from, address indexed _to, uint256 _value, string _message);
 
 	// timestamps for ICO phases
-	uint256 public constant PHASES_START = 1521072000;
-	uint256 public constant PHASES_END = 1524355199;
+	uint256 public constant PHASES_START = 1524268800;
+	uint256 public constant PHASES_END = 1526947199;
 
 	// bonuses for ICO Phases
 	uint256 constant PHASE0_BONUS = 300;
@@ -71,16 +71,16 @@ contract FenixCashTokenSale is Ownable {
 		if(timestamp < PHASES_START) {
 			return 0;
 		}
-		if(timestamp < 1521417599) {
+		if(timestamp < 1524700799) {
 			return PHASE0_BONUS;
 		} 
-		if(timestamp < 1521763199) {
+		if(timestamp < 1524959999) {
 			return PHASE1_BONUS;
 		} 
-		if(timestamp < 1522540799) {
+		if(timestamp < 1525478399) {
 			return PHASE2_BONUS;
 		} 
-		if(timestamp < 1523231999) {
+		if(timestamp < 1526083199) {
 			return PHASE3_BONUS;
 		} 
 		if(timestamp < PHASES_END) {
